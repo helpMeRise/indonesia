@@ -33,3 +33,12 @@
       font-weight: 700;
       font-display: swap;
 }
+
+@font-face {
+  font-family: 'Nunito';
+  src: local('Nunito Semi Bold'), local('Nunito-Semi-Bold'),
+      url('../fonts/nunito-semi-bold.woff2') format('woff2'),
+      url('../fonts/nunito-semi-bold.woff') format('woff');
+      font-weight: 600;
+      font-display: swap;
+}

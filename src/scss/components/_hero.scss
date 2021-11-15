@@ -1,0 +1,35 @@
+.hero {
+  padding: 175px 0 200px;
+  background: url('../img/hero/background.jpg') center / cover no-repeat;
+  color: $color-light;
+  &__content {
+    display: flex;
+    flex-direction: column;
+    padding-left: 80px;
+  }
+  &__subtitle {
+    font-family: Merriweather;
+    font-size: 40px;
+    line-height: 130%;
+    letter-spacing: 0.02em;
+  }
+  &__title {
+    font-weight: 200;
+    font-size: 200px;
+    line-height: 200px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    &::first-letter {
+      margin-left: -0.06em;
+    }
+  }
+  &__text {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 30px;
+  }
+  &__button {
+    max-width: 360px;
+    align-self: flex-end;
+  }
+}

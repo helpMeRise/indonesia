@@ -13,6 +13,8 @@
   <link rel="preload" href="fonts/nunito-extra-light.woff" as="font" type="font/woff" crossorigin>
   <link rel="preload" href="fonts/nunito-bold.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="fonts/nunito-bold.woff" as="font" type="font/woff" crossorigin>
+  <link rel="preload" href="fonts/nunito-semi-bold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/nunito-semi-bold.woff" as="font" type="font/woff" crossorigin>
 
   <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
   <link rel="icon" type="image/png" href="img/favicon.png">
@@ -35,31 +37,48 @@
 </head>
 <body>
 
+  <header class="header">
+    <div class="container header__container">
+    <div class="logo header__logo"></div>
+
+    <nav class="header__menu">
+      <ul class="header__list">
+        <li class="header__item">
+          <a href="#indonesia" class="header__link">Индонезия</a>
+        </li>
+        <li class="header__item">
+          <a href="#travel" class="header__link">Путешествие</a>
+        </li>
+        <li class="header__item">
+          <a href="#tour" class="header__link">Тур 14 дней</a>
+        </li>
+        <li class="header__item">
+          <a href="#why" class="header__link">Почему мы?</a>
+        </li>
+        <li class="header__item">
+          <a href="#album" class="header__link">Фотоальбом</a>
+        </li>
+        <li class="header__item">
+          <a href="#reservation" class="header__link">Бронирование</a>
+        </li>
+        <li class="header__item">
+          <a href="#contacts" class="header__link">Контакты</a>
+        </li>
+      </ul>
+    </nav>
+
+    <button class="header__menu-button"></button>
+    </div>
+    
+  </header>
+
   <section class="section hero">
     <div class="container">
-
-      <div class="header">
-        <div class="logo header__logo"></div>
-
-        <nav class="header__menu">
-          <ul class="header__list">
-            <li class="header__item"><a href="" class="header__link"></a></li>
-            <li class="header__item"><a href="" class="header__link"></a></li>
-            <li class="header__item"><a href="" class="header__link"></a></li>
-            <li class="header__item"><a href="" class="header__link"></a></li>
-            <li class="header__item"><a href="" class="header__link"></a></li>
-            <li class="header__item"><a href="" class="header__link"></a></li>
-            <li class="header__item"><a href="" class="header__link"></a></li>
-          </ul>
-        </nav>
-
-        <button class="header__menu-button"></button>
-      </div>
 
       <div class="hero__content">
         <p class="hero__subtitle">Открой для себя</p>
         <h1 class="hero__title">indonesia</h1>
-        <p class="hero__text">Тур 14 дней, покажем все самое интересное. Вы точно запомните этот отдых навсегда.</p>
+        <p class="hero__text">Тур 14 дней, покажем все самое интересное. <span> <br> </span> Вы точно запомните этот отдых навсегда.</p>
         <button class="button hero__button">Забронировать</button>
       </div>
     </div>

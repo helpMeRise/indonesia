@@ -410,9 +410,14 @@ template {
   font-display: swap;
 }
 
+@font-face {
+  font-family: "Nunito";
+  src: local("Nunito Semi Bold"), local("Nunito-Semi-Bold"), url("../fonts/nunito-semi-bold.woff2") format("woff2"), url("../fonts/nunito-semi-bold.woff") format("woff");
+  font-weight: 600;
+  font-display: swap;
+}
+
 * {
-  margin: 0;
-  padding: 0;
   scroll-behavior: smooth;
 }
 
@@ -430,11 +435,11 @@ html {
 }
 
 body {
-  background-color: #f2f0f1;
-  font-family: "Helvetica Neue Cyr", sans-serif;
-  font-size: 20px;
+  font-family: "Nunito", sans-serif;
+  font-size: 18px;
   font-weight: 300;
-  color: #282626;
+  line-height: 150%;
+  color: #303030;
 }
 
 a {
@@ -442,11 +447,7 @@ a {
   text-decoration: none;
   -webkit-transition: 0.2s;
   transition: 0.2s;
-}
-
-a:hover {
-  -webkit-transform: rotate(-3deg);
-  transform: rotate(-3deg);
+  cursor: pointer;
 }
 
 ul {
@@ -463,20 +464,202 @@ img {
   display: block;
 }
 
+button {
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
 .container {
   max-width: 1300px;
   padding: 0px 60px;
   margin: 0 auto;
 }
 
+.section {
+  padding: 150px 0;
+}
+
+.section__title {
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 150%;
+  margin-bottom: 60px;
+}
+
+.logo {
+  width: 170px;
+  height: 30px;
+  background: url("../img/logo.svg");
+}
+
+.button {
+  font-size: 18px;
+  font-weight: 700;
+  color: #fff;
+  background-color: #FCB500;
+  padding: 25px 111px;
+  border-radius: 12px;
+}
+
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 55px 0px 85px;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(4%, rgba(0, 0, 0, 0.67)), to(rgba(0, 0, 0, 0)));
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.67) 4%, rgba(0, 0, 0, 0) 100%);
+}
+
+.header__container {
+  position: relative;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.header__menu {
+  position: absolute;
+  right: 95px;
+  top: 0;
+  -webkit-transform: translateY(45px);
+  transform: translateY(45px);
+  padding: 30px 35px;
+  display: none;
+  color: #fff;
+  background-color: #FCB500;
+  -webkit-box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.3);
+  border-radius: 20px 0px;
+}
+
+.header__menu_active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header__menu-button {
+  width: 35px;
+  height: 16px;
+  background: url("../img/hero/menu.svg");
+}
+
+.header__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.header__link {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 150%;
+}
+
+.hero {
+  padding: 175px 0 200px;
+  background: url("../img/hero/background.jpg") center/cover no-repeat;
+  color: #fff;
+}
+
+.hero__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding-left: 80px;
+}
+
+.hero__subtitle {
+  font-family: Merriweather;
+  font-size: 40px;
+  line-height: 130%;
+  letter-spacing: 0.02em;
+}
+
+.hero__title {
+  font-weight: 200;
+  font-size: 200px;
+  line-height: 200px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.hero__title::first-letter {
+  margin-left: -0.06em;
+}
+
+.hero__text {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.hero__button {
+  max-width: 360px;
+  -ms-flex-item-align: end;
+  align-self: flex-end;
+}
+
 @media (max-width: 1024px) {
-  .container {
+  .container .container {
     padding: 0px 35px;
+  }
+
+  .section .section {
+    padding: 80px 0;
+  }
+
+  .section .section__title {
+    font-size: 14px;
+    margin-bottom: 30px;
+  }
+
+  .logo {
+    width: 135px;
+    height: 25px;
+  }
+
+  .logo {
+    width: 100px;
+    height: 20px;
   }
 }
 
 @media (max-width: 768px) {
-  .container {
+  .container .container {
     padding: 0px 25px;
+  }
+
+  .section .section {
+    padding: 50px 0;
+  }
+
+  .section .section__title {
+    font-size: 12px;
+    margin-bottom: 15px;
   }
 }
