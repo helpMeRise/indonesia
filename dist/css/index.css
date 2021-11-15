@@ -438,16 +438,28 @@ body {
   font-family: "Nunito", sans-serif;
   font-size: 18px;
   font-weight: 300;
-  line-height: 150%;
   color: #303030;
 }
 
 a {
+  position: relative;
   color: inherit;
   text-decoration: none;
   -webkit-transition: 0.2s;
   transition: 0.2s;
   cursor: pointer;
+}
+
+a:after {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  left: 0;
+  height: 1px;
+  width: 0;
+  background-color: #fff;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 ul {
@@ -479,7 +491,7 @@ p {
 
 .container {
   max-width: 1300px;
-  padding: 0px 60px;
+  padding: 0 60px;
   margin: 0 auto;
 }
 
@@ -488,8 +500,6 @@ p {
 }
 
 .section__title {
-  font-family: Nunito;
-  font-style: normal;
   font-weight: bold;
   font-size: 18px;
   line-height: 150%;
@@ -497,18 +507,17 @@ p {
 }
 
 .logo {
-  width: 170px;
-  height: 30px;
-  background: url("../img/logo.svg");
+  width: 176px;
+  height: 34px;
+  background: url("../img/logo.svg") center/contain no-repeat;
 }
 
 .button {
   font-size: 18px;
   font-weight: 700;
+  line-height: 150%;
   color: #fff;
   background-color: #FCB500;
-  padding: 25px 111px;
-  border-radius: 12px;
 }
 
 .header {
@@ -516,7 +525,7 @@ p {
   top: 0;
   left: 0;
   width: 100%;
-  padding: 55px 0px 85px;
+  padding: 54px 0 87px;
   background: -webkit-gradient(linear, left top, left bottom, color-stop(4%, rgba(0, 0, 0, 0.67)), to(rgba(0, 0, 0, 0)));
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.67) 4%, rgba(0, 0, 0, 0) 100%);
 }
@@ -530,33 +539,36 @@ p {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .header__menu {
   position: absolute;
   right: 95px;
-  top: 0;
-  -webkit-transform: translateY(45px);
-  transform: translateY(45px);
+  top: 40px;
   padding: 30px 35px;
-  display: none;
   color: #fff;
   background-color: #FCB500;
-  -webkit-box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.3);
-  box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.3);
-  border-radius: 20px 0px;
+  -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+  border-radius: 20px 0;
+  opacity: 0;
+  z-index: -1;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .header__menu_active {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  opacity: 1;
+  z-index: 1;
 }
 
 .header__menu-button {
   width: 35px;
   height: 16px;
-  background: url("../img/hero/menu.svg");
+  background: url("../img/hero/menu.svg") center/contain no-repeat;
 }
 
 .header__list {
@@ -577,7 +589,7 @@ p {
 }
 
 .hero {
-  padding: 175px 0 200px;
+  padding: 192px 0 200px;
   background: url("../img/hero/background.jpg") center/cover no-repeat;
   color: #fff;
 }
@@ -609,11 +621,12 @@ p {
 }
 
 .hero__title::first-letter {
-  margin-left: -0.06em;
+  margin-left: -0.09em;
 }
 
 .hero__text {
   font-size: 20px;
+  line-height: 150%;
   font-weight: 700;
   margin-bottom: 30px;
 }
@@ -622,44 +635,208 @@ p {
   max-width: 360px;
   -ms-flex-item-align: end;
   align-self: flex-end;
+  margin-right: 10px;
+  padding: 25px 111px;
+  border-radius: 12px;
+}
+
+@media (min-width: 1000px) {
+  a:hover:after {
+    width: 100%;
+  }
+}
+
+@media (max-width: 1200px) {
+  .container {
+    padding: 0 42px;
+  }
+
+  .logo {
+    width: 137px;
+    height: 25px;
+  }
+
+  .header {
+    padding: 39px 0 45px;
+  }
+
+  .header__menu {
+    right: 80px;
+    top: 30px;
+  }
+
+  .hero {
+    padding: 127px 0 124px;
+  }
+
+  .hero__subtitle {
+    font-size: 30px;
+  }
+
+  .hero__title {
+    font-size: 150px;
+    line-height: 160px;
+    margin-bottom: -10px;
+  }
+
+  .hero__title::first-letter {
+    margin-left: -0.05em;
+  }
+
+  .hero__text {
+    font-size: 18px;
+    margin-bottom: 27px;
+  }
+
+  .hero__button {
+    max-width: 300px;
+    padding: 18px 81px;
+    margin-right: 0;
+    border-radius: 10px;
+  }
 }
 
 @media (max-width: 1024px) {
-  .container .container {
-    padding: 0px 35px;
+  .container {
+    padding: 0 35px;
   }
 
-  .section .section {
+  .section {
     padding: 80px 0;
   }
 
-  .section .section__title {
+  .section__title {
     font-size: 14px;
     margin-bottom: 30px;
   }
 
-  .logo {
-    width: 135px;
-    height: 25px;
+  .header {
+    padding: 39px 0 37px;
+  }
+
+  .header__menu {
+    padding: 30px;
+    right: 70px;
+  }
+
+  .header__list {
+    gap: 20px;
+  }
+
+  .header__item {
+    line-height: 0;
+  }
+
+  .header__link {
+    font-size: 14px;
+  }
+
+  .hero {
+    padding: 113px 0 91px;
+  }
+
+  .hero__content {
+    padding-left: 85px;
+  }
+
+  .hero__subtitle {
+    font-size: 20px;
+    margin-bottom: -10px;
+  }
+
+  .hero__title {
+    font-size: 100px;
+    line-height: 120px;
+    margin-bottom: -3px;
+  }
+
+  .hero__title::first-letter {
+    margin-left: -0.01em;
+  }
+
+  .hero__text {
+    font-size: 14px;
+    margin-bottom: 14px;
+  }
+
+  .hero__button {
+    max-width: 220px;
+    font-size: 14px;
+    padding: 12px 57px;
+    border-radius: 6px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 25px;
+  }
+
+  .section {
+    padding: 50px 0;
+  }
+
+  .section__title {
+    font-size: 12px;
+    margin-bottom: 15px;
   }
 
   .logo {
     width: 100px;
     height: 20px;
   }
-}
 
-@media (max-width: 768px) {
-  .container .container {
-    padding: 0px 25px;
+  .header {
+    padding: 21px 0 24px;
   }
 
-  .section .section {
-    padding: 50px 0;
+  .header__menu {
+    padding: 20px 25px 20px 20px;
+    right: 50px;
+    top: 25px;
   }
 
-  .section .section__title {
+  .header__menu-button {
+    width: 22px;
+    height: 11px;
+    background: url("../img/hero/menu_mob.svg") center/contain no-repeat;
+  }
+
+  .header__list {
+    gap: 23px;
+  }
+
+  .header__link {
     font-size: 12px;
-    margin-bottom: 15px;
+  }
+
+  .hero {
+    padding: 79px 0 46px;
+  }
+
+  .hero__content {
+    padding-left: 0;
+  }
+
+  .hero__subtitle {
+    font-size: 16px;
+    margin-bottom: 3px;
+  }
+
+  .hero__title {
+    font-size: 50px;
+    line-height: 54px;
+    margin-bottom: 13px;
+  }
+
+  .hero__text {
+    font-size: 12px;
+    margin-bottom: 26px;
+  }
+
+  .hero__button {
+    max-width: 150px;
+    font-size: 12px;
+    padding: 8px 30px;
   }
 }

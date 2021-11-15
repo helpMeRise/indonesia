@@ -1,5 +1,5 @@
 .hero {
-  padding: 175px 0 200px;
+  padding: 192px 0 200px;
   background: url('../img/hero/background.jpg') center / cover no-repeat;
   color: $color-light;
   &__content {
@@ -20,16 +20,100 @@
     text-transform: uppercase;
     margin-bottom: 10px;
     &::first-letter {
-      margin-left: -0.06em;
+      margin-left: -0.09em;
     }
   }
   &__text {
     font-size: 20px;
+    line-height: 150%;
     font-weight: 700;
     margin-bottom: 30px;
   }
   &__button {
     max-width: 360px;
     align-self: flex-end;
+    margin-right: 10px;
+    padding: 25px 111px;
+    border-radius: 12px;
+  }
+  
+  @media (max-width: 1200px) {
+    padding: 127px 0 124px;
+    &__subtitle {
+      font-size: 30px;
+    }
+    &__title {
+      font-size: 150px;
+      line-height: 160px;
+      margin-bottom: -10px;
+      &::first-letter {
+        margin-left: -0.05em;
+      }
+    }
+    &__text {
+      font-size: 18px;
+      margin-bottom: 27px;
+    }
+    &__button {
+      max-width: 300px;
+      padding: 18px 81px;
+      margin-right: 0;
+      border-radius: 10px;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    padding: 113px 0 91px;
+    &__content {
+      padding-left: 85px;
+    }
+    &__subtitle {
+      font-size: 20px;
+      margin-bottom: -10px;
+    }
+    &__title {
+      font-size: 100px;
+      line-height: 120px;
+      margin-bottom: -3px;
+      &::first-letter {
+        margin-left: -0.01em;
+      }
+    }
+    &__text {
+      font-size: 14px;
+      margin-bottom: 14px;
+    }
+    &__button {
+      max-width: 220px;
+      font-size: 14px;
+      padding: 12px 57px;
+      border-radius: 6px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    padding: 79px 0 46px;
+    &__content {
+      padding-left: 0;
+    }
+    &__subtitle {
+      font-size: 16px;
+      margin-bottom: 3px;
+    }
+    &__title {
+      font-size: 50px;
+      line-height: 54px;
+      margin-bottom: 13px;
+    }
+    &__text {
+      font-size: 12px;
+      margin-bottom: 26px;
+    }
+    &__button {
+      max-width: 150px;
+      font-size: 12px;
+      padding: 8px 30px;
+    }
   }
 }
+
