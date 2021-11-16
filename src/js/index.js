@@ -32,3 +32,13 @@ if (window.innerWidth <= 769) {
 
     swiper.init();
 }
+
+$('.travel__accordion').accordion({
+    active: true,
+    collapsible: true,
+    heightStyle: 'content',
+    icons: {
+        header: 'travel__marker',
+        activeHeader: 'travel__marker travel__marker_active'
+    }
+});

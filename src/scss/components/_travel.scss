@@ -1,0 +1,177 @@
+.travel {
+  padding-top: 0;
+  &__container {
+    background: url("../img/travel/map.svg") bottom 60px right 60px / 480px 410px no-repeat;
+  }
+  &__content {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__accordion {
+    position: relative;
+    max-width: 580px;
+    padding-left: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 38px;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    &:before {
+      position: absolute;
+      content: '';
+      top: 0;
+      left: 14px;
+      width: 2px;
+      height: 100%;
+      background-color: $add-color;
+    }
+  }
+  &__item {
+    position: relative;
+    cursor: pointer;
+    &:last-child {
+      &:before {
+        position: absolute;
+        content: '';
+        width: 2px;
+        height: 100%;
+        top: 18px;
+        left: -86px;
+        background-color: $color-light;
+      }
+    }
+    &:first-child {
+      &:before {
+        position: absolute;
+        content: '';
+        width: 2px;
+        height: 12px;
+        top: 0;
+        left: -86px;
+        background-color: $color-light;
+      }
+    }
+    &-title {
+      position: relative;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 150%;
+    }
+    &-text {
+      font-weight: 300;
+      font-size: 18px;
+      line-height: 150%;
+      padding-top: 17px;
+      padding-bottom: 26px;
+    }
+  }
+  &__marker {
+    position: absolute;
+    content: '';
+    top: 50%;
+    left: -93px;
+    transform: translateY(-50%);
+    width: 18px;
+    height: 18px;
+    background-color: $add-color;
+    border-radius: 50%;
+    transition: 0.2s;
+    &_active {
+      width: 30px;
+      height: 30px;
+      left: -100px;
+    }
+  }
+
+  @media (max-width: 1200px) {
+    &__container {
+      background: url("../img/travel/map.svg") bottom 60px right 42px / 314px 268px no-repeat;
+    }
+    &__accordion {
+      max-width: 520px;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    padding-bottom: 90px;
+    &__container {
+      background: url("../img/travel/map.svg") bottom center / 374px 320px no-repeat;
+      padding-bottom: 350px;
+    }
+    &__accordion {
+      max-width: 620px;
+      gap: 44px;
+    }
+    &__text {
+      &_big {
+        max-width: 370px;
+      }
+    }
+    &__item {
+      &-title {
+        font-size: 16px;
+      }
+      &-text {
+        padding-top: 23px;
+        font-size: 14px;
+        padding-bottom: 0;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding-bottom: 55px;
+    &__container {
+      background: url("../img/travel/map.svg") bottom center / 266px 226px no-repeat;
+      padding-bottom: 255px;
+    }
+    &__text {
+      &_big {
+        max-width: 270px;
+      }
+    }
+    &__accordion {
+      padding-left: 28px;
+      gap: 25px;
+      &:before {
+        left: 7px;
+        width: 1px;
+      }
+    }
+    &__item {
+      &:last-child {
+        &:before {
+          width: 1px;
+          top: 18px;
+          left: -21px;
+        }
+      }
+      &:first-child {
+        &:before {
+          height: 20px;
+          width: 1px;
+          left: -21px;
+        }
+      }
+      &-title {
+        max-width: 270px;
+        font-size: 14px;
+      }
+      &-text {
+        padding-top: 15px;
+        font-size: 12px;
+      }
+    }
+    &__marker {
+      left: -26px;
+      transform: translateY(-50%);
+      width: 11px;
+      height: 11px;
+      &_active {
+        width: 16px;
+        height: 16px;
+        left: -28px;
+      }
+    }
+  }
+}

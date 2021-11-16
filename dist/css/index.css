@@ -1524,12 +1524,116 @@ p {
   padding-top: 325px;
 }
 
-.about__item__br_tablet {
+.about__br_tablet {
   display: none;
 }
 
-.about__item__br_mob {
+.about__br_mob {
   display: none;
+}
+
+.travel {
+  padding-top: 0;
+}
+
+.travel__container {
+  background: url("../img/travel/map.svg") bottom 60px right 60px/480px 410px no-repeat;
+}
+
+.travel__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.travel__accordion {
+  position: relative;
+  max-width: 580px;
+  padding-left: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 38px;
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+
+.travel__accordion:before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 14px;
+  width: 2px;
+  height: 100%;
+  background-color: #FCB500;
+}
+
+.travel__item {
+  position: relative;
+  cursor: pointer;
+}
+
+.travel__item:last-child:before {
+  position: absolute;
+  content: "";
+  width: 2px;
+  height: 100%;
+  top: 18px;
+  left: -86px;
+  background-color: #fff;
+}
+
+.travel__item:first-child:before {
+  position: absolute;
+  content: "";
+  width: 2px;
+  height: 12px;
+  top: 0;
+  left: -86px;
+  background-color: #fff;
+}
+
+.travel__item-title {
+  position: relative;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 150%;
+}
+
+.travel__item-text {
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 150%;
+  padding-top: 17px;
+  padding-bottom: 26px;
+}
+
+.travel__marker {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: -93px;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  width: 18px;
+  height: 18px;
+  background-color: #FCB500;
+  border-radius: 50%;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.travel__marker_active {
+  width: 30px;
+  height: 30px;
+  left: -100px;
 }
 
 @media (min-width: 1000px) {
@@ -1602,6 +1706,10 @@ p {
     padding: 0 42px;
   }
 
+  .section__text_big {
+    max-width: 540px;
+  }
+
   .logo {
     width: 137px;
     height: 25px;
@@ -1652,6 +1760,14 @@ p {
 
   .about__item:last-child {
     right: 42px;
+  }
+
+  .travel__container {
+    background: url("../img/travel/map.svg") bottom 60px right 42px/314px 268px no-repeat;
+  }
+
+  .travel__accordion {
+    max-width: 520px;
   }
 }
 
@@ -1792,6 +1908,34 @@ p {
 
   .about__br_tablet {
     display: inline;
+  }
+
+  .travel {
+    padding-bottom: 90px;
+  }
+
+  .travel__container {
+    background: url("../img/travel/map.svg") bottom center/374px 320px no-repeat;
+    padding-bottom: 350px;
+  }
+
+  .travel__accordion {
+    max-width: 620px;
+    gap: 44px;
+  }
+
+  .travel__text_big {
+    max-width: 370px;
+  }
+
+  .travel__item-title {
+    font-size: 16px;
+  }
+
+  .travel__item-text {
+    padding-top: 23px;
+    font-size: 14px;
+    padding-bottom: 0;
   }
 }
 
@@ -1934,6 +2078,65 @@ p {
   .about__item picture,
   .about__item img {
     height: 100%;
+  }
+
+  .travel {
+    padding-bottom: 55px;
+  }
+
+  .travel__container {
+    background: url("../img/travel/map.svg") bottom center/266px 226px no-repeat;
+    padding-bottom: 255px;
+  }
+
+  .travel__text_big {
+    max-width: 270px;
+  }
+
+  .travel__accordion {
+    padding-left: 28px;
+    gap: 25px;
+  }
+
+  .travel__accordion:before {
+    left: 7px;
+    width: 1px;
+  }
+
+  .travel__item:last-child:before {
+    width: 1px;
+    top: 18px;
+    left: -21px;
+  }
+
+  .travel__item:first-child:before {
+    height: 20px;
+    width: 1px;
+    left: -21px;
+  }
+
+  .travel__item-title {
+    max-width: 270px;
+    font-size: 14px;
+  }
+
+  .travel__item-text {
+    padding-top: 15px;
+    font-size: 12px;
+  }
+
+  .travel__marker {
+    left: -26px;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    width: 11px;
+    height: 11px;
+  }
+
+  .travel__marker_active {
+    width: 16px;
+    height: 16px;
+    left: -28px;
   }
 }
 
