@@ -176,6 +176,19 @@ h1, h2, h3, p {
   background-color: $add-color;
 }
 
+.swiper-pagination-bullet {
+  width: 4px !important;
+  height: 4px !important;
+  background-color: $color-light;
+  opacity: 1;
+  margin: 0 3px !important;
+  &-active {
+    width: 12px !important;
+    background-color: $add-color;
+    border-radius: 10px;
+  }
+}
+
 
 
 

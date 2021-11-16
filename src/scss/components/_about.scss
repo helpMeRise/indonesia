@@ -42,7 +42,15 @@
       right: 60px;
     }
     &:nth-child(3) {
-      padding-top: 230px;
+      padding-top: 325px;
+    }
+    &__br {
+      &_tablet {
+        display: none;
+      }
+      &_mob {
+        display: none;
+      }
     }
   }
   
@@ -52,8 +60,9 @@
     &__text {
       &_small {
         &:nth-child(2) {
-          margin-bottom: 0;
+          margin-bottom: -10px;
           padding-left: 240px;
+          max-width: 540px;
         }
         &:last-child {
           padding-left: 0;
@@ -74,8 +83,10 @@
       }
       &:nth-child(2) {
         max-width: 380px;
+        padding-top: 40px;
       }
       &:nth-child(3) {
+        padding-top: 230px;
         max-width: 220px;
       }
       &:nth-child(4) {
@@ -111,7 +122,7 @@
         }
 
         &:last-child {
-          max-width: 300px;
+          max-width: 290px;
           padding-left: 0;
         }
       }
@@ -134,13 +145,24 @@
         right: 35px;
       }
       &:nth-child(3) {
-        padding-top: 128px;
+        max-width: 140px;
+        padding-top: 145px;
       }
       &:nth-child(2) {
         max-width: 300px;
+        padding-top: 0;
+        padding-bottom: 25px;
       }
       &:nth-child(4) {
         max-width: 220px;
+      }
+    }
+    &__br {
+      &_desktop {
+        display: none;
+      }
+      &_tablet {
+        display: inline;
       }
     }
   }
@@ -148,6 +170,11 @@
   @media (max-width: 768px) {
     padding-top: 50px;
     padding-bottom: 50px;
+    position: relative;
+    overflow: hidden;
+    &__content {
+      align-items: center;
+    }
     &__text {
       &_small {
         &:nth-child(2) {
@@ -158,10 +185,12 @@
       }
     }
     &__pics {
+      width: 320px;
       margin-bottom: 25px;
+      height: 208px;
     }
     &__list {
-      overflow-x: auto;
+      max-height: 208px;
     }
     &__item {
       &:nth-child(1) {
@@ -170,6 +199,7 @@
       }
       &:nth-child(2) {
         min-width: 320px;
+        padding-bottom: 0;
       }
       &:nth-child(3) {
         min-width: 320px;
@@ -182,6 +212,18 @@
         position: unset;
         min-width: 320px;
       }
+      picture, img {
+        height: 100%;
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    &__content {
+      align-items: flex-start;
+    }
+    &__pics {
+      margin-left: -25px;
     }
   }
 }

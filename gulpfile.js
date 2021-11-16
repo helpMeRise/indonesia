@@ -58,7 +58,7 @@ const path = {
 		html: 'src/*.html',
 		pug: 'src/pug/*.pug',
 		scss: 'src/scss/**/*.scss',
-		js: 'src/js/index.js',
+		js: ['src/js/libs/*.js', 'src/js/index.js'],
 		img: 'src/img/**/*.*',
 		svg: 'src/svg/**/*.svg',
 		imgF: 'src/img/**/*.{jpg,jpeg,png}',
