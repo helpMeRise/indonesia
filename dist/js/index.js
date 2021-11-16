@@ -9362,6 +9362,32 @@ $('.travel__accordion').accordion({
     activeHeader: 'travel__marker travel__marker_active'
   }
 });
+
+const selects = () => {
+  const select = document.querySelector('#tour__date');
+  const optionsBlock = document.querySelector('.options');
+  const options = select.querySelectorAll('.tour__option');
+  const dates = document.querySelectorAll('.radio');
+  const btn = document.querySelector('.done');
+  const labels = optionsBlock.querySelectorAll('.radio__label');
+  select.addEventListener('click', e => {
+    e.preventDefault();
+    select.setAttribute('disabled', 'disabled');
+    options.forEach(item => {
+      item.style.display = 'none';
+    });
+    optionsBlock.classList.toggle('options_active');
+  });
+  btn.addEventListener('click', () => {
+    dates.forEach((item, index) => {
+      if (item.checked) {
+        select.selectedIndex = index + 1;
+      }
+    });
+  });
+};
+
+selects();
 }();
 /******/ })()
 ;
