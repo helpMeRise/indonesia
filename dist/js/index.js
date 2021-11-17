@@ -9344,7 +9344,7 @@ const swiper = new Swiper('.swiper', {
   }
 });
 
-if (window.innerWidth <= 769) {
+if (window.innerWidth <= 768) {
   aboutSlider.classList.add('swiper');
   aboutSliderWrap.classList.add('swiper-wrapper');
   aboutSlides.forEach(item => {

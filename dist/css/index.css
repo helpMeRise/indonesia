@@ -1745,6 +1745,7 @@ p {
   -webkit-transition: 1s;
   transition: 1s;
   padding: 20px;
+  z-index: 2;
 }
 
 .options__title {
@@ -1846,7 +1847,6 @@ p {
   width: 282px;
   height: 381px;
   padding-left: 0;
-  padding-right: 0;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -1963,6 +1963,25 @@ p {
   -webkit-line-clamp: 1;
   text-overflow: ellipsis;
   overflow: hidden;
+}
+
+.options__people-wrap {
+  padding: 10px;
+}
+
+.options__people {
+  gap: 10px;
+  font-size: 12px;
+}
+
+.options__options-wrap {
+  width: 150px;
+  padding: 10px;
+}
+
+.options__options {
+  font-size: 12px;
+  gap: 15px;
 }
 
 @media (min-width: 1000px) {
@@ -2106,12 +2125,36 @@ p {
     right: 42px;
   }
 
+  .travel {
+    padding-bottom: 115px;
+  }
+
   .travel__container {
-    background: url("../img/travel/map.svg") bottom 60px right 42px/314px 268px no-repeat;
+    background: url("../img/travel/map.svg") bottom 140px right 42px/314px 268px no-repeat;
   }
 
   .travel__accordion {
-    max-width: 520px;
+    max-width: 540px;
+  }
+
+  .travel__item-text {
+    padding-bottom: 0;
+  }
+
+  .tour {
+    padding-top: 80px;
+  }
+
+  .tour__select-wrapper {
+    max-width: 187px;
+  }
+
+  .tour__content {
+    padding: 50px 60px;
+  }
+
+  .tour__button {
+    padding: 13px 41px 16px;
   }
 }
 
@@ -2129,6 +2172,7 @@ p {
     font-size: 20px;
     max-width: 380px;
     margin-bottom: 40px;
+    line-height: 150%;
   }
 
   .section__text_small {
@@ -2255,7 +2299,7 @@ p {
   }
 
   .travel {
-    padding-bottom: 90px;
+    padding-bottom: 85px;
   }
 
   .travel__container {
@@ -2280,6 +2324,80 @@ p {
     padding-top: 23px;
     font-size: 14px;
     padding-bottom: 0;
+  }
+
+  .tour {
+    padding-top: 35px;
+  }
+
+  .tour__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+
+  .tour__info {
+    max-width: 400px;
+  }
+
+  .tour__text {
+    font-size: 14px;
+    max-width: 330px;
+    margin-bottom: 0;
+  }
+
+  .tour__content {
+    max-width: 300px;
+    height: 100%;
+    padding: 30px;
+    margin-top: -35px;
+  }
+
+  .tour__form {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding: 20px 17px 30px 37px;
+    gap: 30px;
+  }
+
+  .tour__label {
+    font-size: 14px;
+  }
+
+  .tour__select-wrapper {
+    padding: 8px 15px 9px 13px;
+    gap: 15px;
+  }
+
+  .tour__select-text {
+    font-size: 14px;
+  }
+
+  .tour__select-arrow {
+    top: 25px;
+    right: 15px;
+  }
+
+  .tour__button {
+    padding: 12px 43px;
+    font-size: 14px;
+  }
+
+  .options {
+    top: 50px;
+  }
+
+  .options__people-wrap {
+    right: 0;
+  }
+
+  .options__options-wrap {
+    right: 0;
   }
 }
 
@@ -2481,6 +2599,90 @@ p {
     width: 16px;
     height: 16px;
     left: -28px;
+  }
+
+  .tour {
+    padding-top: 20px;
+  }
+
+  .tour__container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+
+  .tour__info {
+    max-width: 270px;
+    margin-bottom: 25px;
+  }
+
+  .tour__text {
+    font-size: 12px;
+    margin-bottom: 0;
+  }
+
+  .tour__content {
+    margin-top: 0;
+    padding: 25px;
+  }
+
+  .tour__form {
+    padding: 8px 25px 25px;
+    max-height: 400px;
+  }
+
+  .tour__select-wrapper {
+    padding: 8px 11px 15px 10px;
+    max-width: 150px;
+  }
+
+  .tour__select-text {
+    font-size: 12px;
+  }
+
+  .tour__label {
+    font-size: 12px;
+  }
+
+  .tour__button {
+    font-size: 12px;
+    padding: 8px 30px;
+    border-radius: 4px;
+  }
+
+  .options__title {
+    font-size: 14px;
+  }
+
+  .options__date-wrap {
+    width: 200px;
+    padding: 10px 10px 10px 0;
+    height: auto;
+  }
+
+  .options__months {
+    width: 100px;
+  }
+
+  .options__month {
+    font-size: 12px;
+  }
+
+  .options__dates {
+    padding-left: 10px;
+  }
+
+  .options__date {
+    font-size: 12px;
+  }
+
+  .options__button {
+    font-size: 12px;
+    padding: 8px 20px;
   }
 }
 

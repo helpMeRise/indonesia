@@ -84,16 +84,22 @@
   }
 
   @media (max-width: 1200px) {
+    padding-bottom: 115px;
     &__container {
-      background: url("../img/travel/map.svg") bottom 60px right 42px / 314px 268px no-repeat;
+      background: url("../img/travel/map.svg") bottom 140px right 42px / 314px 268px no-repeat;
     }
     &__accordion {
-      max-width: 520px;
+      max-width: 540px;
+    }
+    &__item {
+      &-text {
+        padding-bottom: 0;
+      }
     }
   }
 
   @media (max-width: 1024px) {
-    padding-bottom: 90px;
+    padding-bottom: 85px;
     &__container {
       background: url("../img/travel/map.svg") bottom center / 374px 320px no-repeat;
       padding-bottom: 350px;
