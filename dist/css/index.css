@@ -1646,6 +1646,7 @@ p {
 .tour__text {
   max-width: 410px;
   margin-bottom: 80px;
+  line-height: 150%;
 }
 
 .tour__content {
@@ -1702,6 +1703,7 @@ p {
   font-size: 16px;
   line-height: 130%;
   opacity: 0.7;
+  max-width: 140px;
 }
 
 .tour__select-arrow {
@@ -1718,15 +1720,19 @@ p {
 .tour__button {
   padding: 22px 56px;
   border-radius: 12px;
+  line-height: 130%;
+  max-height: 67px;
+  -ms-flex-item-align: center;
+  align-self: center;
 }
 
 .options {
   position: absolute;
+  top: 123px;
   background: #FFFFFF;
   color: #303030;
   -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
-  padding-top: 20px;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -1738,6 +1744,7 @@ p {
   display: none;
   -webkit-transition: 1s;
   transition: 1s;
+  padding: 20px;
 }
 
 .options__title {
@@ -1759,7 +1766,7 @@ p {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  width: 150px;
+  width: 140px;
   -ms-flex-item-align: start;
   align-self: flex-start;
   -webkit-box-align: center;
@@ -1812,8 +1819,7 @@ p {
 }
 
 .options__date_active {
-  -webkit-transform: scale(1.2);
-  transform: scale(1.2);
+  color: #FCB500;
 }
 
 .options__radio {
@@ -1830,21 +1836,23 @@ p {
 .options__button {
   -ms-flex-item-align: end;
   align-self: flex-end;
-  margin-right: 20px;
   padding: 10px 30px;
   border-radius: 8px;
   font-size: 14px;
 }
 
 .options__date-wrap {
-  bottom: -417px;
   right: 0;
   width: 282px;
   height: 381px;
+  padding-left: 0;
+  padding-right: 0;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .options__people-wrap {
-  top: 123px;
   right: 50%;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1853,11 +1861,6 @@ p {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  opacity: 1;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  padding: 20px;
 }
 
 .options__people {
@@ -1877,12 +1880,107 @@ p {
   gap: 20px;
 }
 
+.options__number:active {
+  color: #FCB500;
+}
+
+.options__number_active {
+  color: #FCB500;
+}
+
+.options__options-wrap {
+  right: 20px;
+  width: 219px;
+}
+
+.options__options {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 130%;
+  gap: 25px;
+  margin-bottom: 20px;
+}
+
+.options__option {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 36px;
+}
+
+.options__option_active {
+  color: #FCB500;
+}
+
+.options__check {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 16px;
+  height: 16px;
+  border: 1px solid #303030;
+}
+
+.options__check_active {
+  background: url("../img/tour/check.svg") center/contain no-repeat;
+  border: 1px solid #FCB500;
+}
+
+.options__checkbox {
+  position: absolute;
+  width: 0;
+  height: 0;
+  visibility: hidden;
+}
+
+.options__checkbox-label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+  cursor: pointer;
+}
+
+.options__select-text_active {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
 @media (min-width: 1000px) {
   a:hover:after {
     width: 100%;
   }
 
   .options__date:hover {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+
+  .options__number:hover {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+
+  .options__checkbox-label:hover {
     -webkit-transform: scale(1.1);
     transform: scale(1.1);
   }

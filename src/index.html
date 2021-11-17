@@ -192,7 +192,7 @@
     </div>
   </section>
 
-  <section class="section tour">
+  <section class="section tour" id="tour">
     <div class="container">
       <h2 class="section__title tour__title">Тур 14 дней</h2>
       <p class="section__text section__text_big">Думаем, показать тебе Индонезию лучше, чем рассказывать о ней.</p>
@@ -284,37 +284,37 @@
               <ul class="options__people">
                 <li class="options__number">
                   <label class="options__radio-label">1
-                    <input type="radio" name="date" class="options__radio">
+                    <input type="radio" name="people" class="options__radio">
                   </label>
                 </li>
 
                 <li class="options__number">
                   <label class="options__radio-label">2
-                    <input type="radio" name="date" class="options__radio">
+                    <input type="radio" name="people" class="options__radio">
                   </label>
                 </li>
 
                 <li class="options__number">
                   <label class="options__radio-label">3
-                    <input type="radio" name="date" class="options__radio">
+                    <input type="radio" name="people" class="options__radio">
                   </label>
                 </li>
 
                 <li class="options__number">
                   <label class="options__radio-label">4
-                    <input type="radio" name="date" class="options__radio">
+                    <input type="radio" name="people" class="options__radio">
                   </label>
                 </li>
 
                 <li class="options__number">
                   <label class="options__radio-label">5
-                    <input type="radio" name="date" class="options__radio">
+                    <input type="radio" name="people" class="options__radio">
                   </label>
                 </li>
 
                 <li class="options__number">
                   <label class="options__radio-label">6
-                    <input type="radio" name="date" class="options__radio">
+                    <input type="radio" name="people" class="options__radio">
                   </label>
                 </li>
               </ul>
@@ -323,16 +323,58 @@
 
           <div class="tour__select-wrapper tour__select-wrapper_options">
             <label for="tour__options" class="tour__label">Опции</label>
-            <select name="" id="tour__options" class="tour__select">
+            <select name="" id="tour__options" class="tour__select" multiple>
+              <option value="" class="tour__option">Выбери нужные опции</option>
               <option value="" class="tour__option">Няня</option>
               <option value="" class="tour__option">Персональное меню</option>
               <option value="" class="tour__option">Персональный гид</option>
               <option value="" class="tour__option">Улучшенная палатка</option>
             </select>
+
             <div class="tour__select_visible">
               <p class="tour__select-text"></p>
               <span class="tour__select-arrow"></span>
             </div>
+
+
+            <div class="options options__options-wrap">
+              <h3 class="options__title">Опции</h3>
+
+                <ul class="options__options">
+                  <li class="options__option">
+                    <span class="options__check"></span>
+                    <label class="options__checkbox-label">Няня
+                      <input type="checkbox" name="nurse" class="options__checkbox options__checkbox">
+                    </label>
+                  </li>
+
+                  <li class="options__option">
+                    <span class="options__check"></span>
+                    <label class="options__checkbox-label">Персональное меню
+                      <input type="checkbox" name="menu" class="options__checkbox options__checkbox">
+                    </label>
+                  </li>
+
+                  <li class="options__option">
+                    <span class="options__check"></span>
+                    <label class="options__checkbox-label">Персональный гид
+                      <input type="checkbox" name="guide" class="options__checkbox options__checkbox">
+                    </label>
+                  </li>
+
+                  <li class="options__option">
+                    <span class="options__check"></span>
+                    <label class="options__checkbox-label">Улучшенная палатка
+                      <input type="checkbox" name="tent" class="options__checkbox options__checkbox">
+                    </label>
+                  </li>
+                </ul>
+
+              <button class="button options__button options__button_options">Готово</button>
+              </div>
+
+
+
           </div>
 
           <button class="button tour__button">Узнать цену</button>
