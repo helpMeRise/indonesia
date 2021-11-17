@@ -44,27 +44,42 @@ $('.travel__accordion').accordion({
 });
 
 const selects = () => {
-    const select = document.querySelector('#tour__date');
-    const optionsBlock = document.querySelector('.options');
-    const options = select.querySelectorAll('.tour__option')
-    const dates = document.querySelectorAll('.radio');
-    const btn = document.querySelector('.done');
-    const labels = optionsBlock.querySelectorAll('.radio__label');
+    const selectDate = document.querySelector('#tour__date');
+    const optionsDateBlock = document.querySelector('.options__date-wrap');
+    const optionsDate = selectDate.querySelectorAll('.tour__option')
+    const dates = document.querySelectorAll('.options__radio_date');
+    const btn = document.querySelector('.options__button_date');
+    const labels = optionsDateBlock.querySelectorAll('.radio__label');
+    const selectText = document.querySelector('.tour__select-text');
+    const arrow = document.querySelector('.tour__select-arrow');
 
-    select.addEventListener('click', (e) => {
-        e.preventDefault();
-        select.setAttribute('disabled', 'disabled');
-        options.forEach( item => {
-            item.style.display = 'none';
-        })
-        optionsBlock.classList.toggle('options_active');
+    selectText.textContent = optionsDate[0].textContent;
+
+    arrow.addEventListener('click', () => {
+        optionsDateBlock.classList.toggle('options_active')
     })
 
-    btn.addEventListener('click', () => {
+    dates.forEach( item => {
+        item.addEventListener('click', (e) => {
+            let target = e.target;
+            target.closest('.options__date').classList.add('options__date_active');
+            dates.forEach( i => {
+                if (!i.checked) {
+                    i.closest('.options__date').classList.remove('options__date_active');
+                }
+            })
+        })
+    });
+
+    btn.addEventListener('click', (e) => {
+        e.preventDefault();
         dates.forEach( (item, index) => {
             if ( item.checked ) {
-                select.selectedIndex = index + 1;
+                selectDate.selectedIndex = index + 1;
+                selectText.textContent = optionsDate[index + 1].textContent;
             }
+
+            optionsDateBlock.classList.remove('options_active')
         })
     })
 
