@@ -1,0 +1,197 @@
+.reservation {
+  padding-top: 75px;
+  padding-bottom: 150px;
+  &__form {
+    margin: 0 auto;
+    padding: 60px 100px;
+    border: 1px solid $placeholder-color;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    max-width: 980px;
+  }
+  &__title {
+    font-family: Merriweather;
+    font-weight: 400;
+    font-size: 34px;
+    line-height: 150%;
+    margin-bottom: 30px;
+  }
+  &__inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;
+  }
+  &__selects {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  &__select {
+    &-wrapper {
+      background: rgba(255, 255, 255, 0.72);
+      border: 1px solid $placeholder-color;
+      border-radius: 12px;
+      padding: 12px 15px;
+      max-width: 221px;
+      height: auto;
+    }
+    &-arrow {
+      background: url("../img/reservation/arrow.svg") center / contain no-repeat;
+    }
+  }
+  &__input-wrap {
+    background: rgba(255, 255, 255, 0.72);
+    border: 1px solid $placeholder-color;
+    padding: 12px 15px;
+    border-radius: 12px;
+    color: $placeholder-color;
+    display: flex;
+    flex-direction: column;
+    min-width: 360px;
+  }
+  &__label {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 130%;
+    color: $color;
+    margin-bottom: 12px;
+  }
+  &__input {
+    border: none;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 130%;
+    opacity: 0.7;
+  }
+  &__contacts {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__info {
+    min-width: 360px;
+  }
+  &__bottom {
+    width: 100%;
+  }
+  &__data {
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 150%;
+    margin-bottom: 10px;
+  }
+  &__price {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 150%;
+  }
+  &__button {
+    padding: 24px 112px;
+    border-radius: 12px;
+  }
+  @media (max-width: 1200px) {
+    padding-top: 60px;
+    padding-bottom: 120px;
+  }
+  @media (max-width: 1024px) {
+    padding-top: 45px;
+    padding-bottom: 90px;
+    &__form {
+      padding: 40px 60px;
+    }
+    &__title {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+    &__label {
+      font-size: 14px;
+      margin-bottom: 15px;
+    }
+    &__select {
+      &-wrapper {
+        width: 170px;
+        height: 99px;
+      }
+    }
+    &__input {
+      &-wrap {
+        min-width: 280px;
+      }
+    }
+    &__data {
+      max-width: 240px;
+      font-size: 14px;
+    }
+    &__price {
+      font-size: 18px;
+    }
+    &__button {
+      padding: 12px 57px;
+      font-size: 14px;
+    }
+  }
+  @media (max-width: 768px) {
+    padding-top: 25px;
+    padding-bottom: 50px;
+    &__form {
+      padding: 20px 10px;
+      max-width: 270px;
+      gap: 25px;
+    }
+    &__title {
+      font-size: 16px;
+      margin-bottom: 0;
+    }
+    &__inputs {
+      gap: 15px;
+    }
+    &__selects {
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+    }
+    &__select {
+      &-wrapper {
+        padding: 8px 15px;
+        height: 86px;
+      }
+      &-text {
+        max-width: 120px;
+      }
+    }
+    &__contacts {
+      flex-direction: column;
+      gap: 15px;
+    }
+    &__input {
+      font-size: 12px;
+      &-wrap {
+        min-width: 250px;
+      }
+    }
+    &__label {
+      font-size: 12px;
+    }
+    &__bottom {
+      flex-direction: column;
+      gap: 25px;
+    }
+    &__data {
+      font-size: 12px;
+    }
+    &__button {
+      font-size: 12px;
+      padding: 8px 30px;
+      border-radius: 4px;
+      max-width: 150px;
+      align-self: center;
+    }
+  }
+}
