@@ -380,22 +380,23 @@
       font-size: 12px;
       padding: 8px 20px;
     }
+    &__people-wrap {
+      padding: 10px;
+    }
+    &__people {
+      gap: 10px;
+      font-size: 12px;
+    }
+    &__options-wrap {
+      width: 150px;
+      padding: 10px;
+    }
+    &__options {
+      font-size: 12px;
+      gap: 15px;
+    }
   }
-  &__people-wrap {
-    padding: 10px;
-  }
-  &__people {
-    gap: 10px;
-    font-size: 12px;
-  }
-  &__options-wrap {
-    width: 150px;
-    padding: 10px;
-  }
-  &__options {
-    font-size: 12px;
-    gap: 15px;
-  }
+
 }
 
 
