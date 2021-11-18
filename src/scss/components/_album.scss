@@ -1,0 +1,77 @@
+.album {
+  padding: 75px 0;
+  &__slider {
+    position: relative;
+  }
+  &__item {
+    width: auto;
+  }
+  &__left {
+    position: absolute;
+    content: '';
+    width: 90px;
+    height: 90px;
+    top: 50%;
+    left: 130px;
+    transform: translateY(-50%);
+    background: url("../img/album/left.svg") center / contain no-repeat;
+    z-index: 3;
+    cursor: pointer;
+  }
+  &__right {
+    position: absolute;
+    content: '';
+    width: 90px;
+    height: 90px;
+    top: 50%;
+    right: 130px;
+    transform: translateY(-50%);
+    background: url("../img/album/right.svg") center / contain no-repeat;
+    z-index: 3;
+    cursor: pointer;
+  }
+  &__nav_dis {
+    display: none;
+  }
+  @media (max-width: 1110px) {
+    padding: 120px 0px 60px;
+    &__item {
+      max-width: 822px;
+    }
+    &__left {
+      right: 40px;
+    }
+    &__right {
+      right: 40px;
+    }
+  }
+  @media (max-width: 1024px) {
+    padding: 90px 0px 45px;
+    &__text {
+      max-width: 420px;
+    }
+    &__item {
+      max-width: unset;
+    }
+    &__left {
+      right: 34px;
+    }
+    &__right {
+      right: 34px;
+    }
+  }
+  @media (max-width: 768px) {
+    padding: 50px 0px 25px;
+    &__left {
+      width: 34px;
+      height: 34px;
+      left: 25px;
+    }
+    &__right {
+      width: 34px;
+      height: 34px;
+      right: 25px;
+    }
+  }
+
+}

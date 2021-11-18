@@ -9336,7 +9336,7 @@ burgerMenu();
 const aboutSlider = document.querySelector('.about__pics'),
       aboutSliderWrap = document.querySelector('.about__list'),
       aboutSlides = document.querySelectorAll('.about__item');
-const swiper = new Swiper('.swiper', {
+const aboutSwiper = new Swiper('.about__slider', {
   init: false,
   loop: false,
   pagination: {
@@ -9344,15 +9344,18 @@ const swiper = new Swiper('.swiper', {
   }
 });
 
-if (window.innerWidth <= 768) {
-  aboutSlider.classList.add('swiper');
-  aboutSliderWrap.classList.add('swiper-wrapper');
-  aboutSlides.forEach(item => {
-    item.classList.add('swiper-slide');
-  });
-  swiper.init();
-}
+const sliderMob = () => {
+  if (window.innerWidth <= 768) {
+    aboutSlider.classList.add('about__slider', 'swiper');
+    aboutSliderWrap.classList.add('swiper-wrapper');
+    aboutSlides.forEach(item => {
+      item.classList.add('swiper-slide');
+    });
+    aboutSwiper.init();
+  }
+};
 
+sliderMob();
 $('.travel__accordion').accordion({
   active: true,
   collapsible: true,
@@ -9464,6 +9467,21 @@ const selects = () => {
 };
 
 selects();
+const albumSwiper = new Swiper('.album__slider', {
+  slidesPerView: 1,
+  centered: true,
+  navigation: {
+    prevEl: '.album__left',
+    nextEl: '.album__right',
+    disabledClass: 'album__nav_dis'
+  },
+  breakpoints: {
+    1025: {
+      slidesPerView: 'auto'
+    }
+  }
+});
+albumSwiper.init();
 }();
 /******/ })()
 ;
