@@ -26,14 +26,31 @@
       }
     }
   }
+  &__link {
+    width: 26px;
+    height: 26px;
+  }
   &__socials {
     display: flex;
     justify-content: space-between;
     max-width: 210px;
     &-link {
+      display: block;
       width: 26px;
       height: 26px;
       cursor: pointer;
+      transition: 0.5s;
+      &:after {
+        display: none;
+      }
+      &:focus, &:active {
+        opacity: 0.7;
+      }
+      @media (min-width: 1000px) {
+         &:hover {
+           transform: rotate(-30deg);
+         }
+      }
       &_wa {
         background: url("../img/footer/whats-app.svg") center / contain no-repeat;
       }

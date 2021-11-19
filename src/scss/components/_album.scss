@@ -17,6 +17,20 @@
     background: url("../img/album/left.svg") center / contain no-repeat;
     z-index: 3;
     cursor: pointer;
+    border-radius: 50%;
+    &:focus {
+      background-color: $placeholder-color;
+    }
+    &:active {
+      transform: translateY(-50%) rotate(180deg);
+      background: url("../img/album/arrow-right-active.svg") center / contain no-repeat;
+    }
+    @media (min-width: 1000px) {
+      &:hover {
+        transform: translateY(-50%) rotate(180deg);
+        background: url("../img/album/arrow-right-black.svg") center / contain no-repeat;
+      }
+    }
   }
   &__right {
     position: absolute;
@@ -29,6 +43,18 @@
     background: url("../img/album/right.svg") center / contain no-repeat;
     z-index: 3;
     cursor: pointer;
+    border-radius: 50%;
+    &:focus {
+      background-color: $placeholder-color;
+    }
+    &:active {
+      background: url("../img/album/arrow-right-active.svg") center / contain no-repeat;
+    }
+    @media (min-width: 1000px) {
+      &:hover {
+        background: url("../img/album/arrow-right-black.svg") center / contain no-repeat;
+      }
+    }
   }
   &__nav_dis {
     display: none;

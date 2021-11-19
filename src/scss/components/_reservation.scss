@@ -38,9 +38,26 @@
       padding: 12px 15px;
       max-width: 221px;
       height: auto;
+      &:focus {
+        .tour__select-arrow {
+          background: url("../img/tour/arrow_orange.svg") center / 12px 7px no-repeat;
+        }
+      }
+      &:active {
+        color: $add-color;
+        .tour__select-arrow {
+          background: url("../img/tour/arrow_orange.svg") center / 12px 7px no-repeat;
+        }
+
+      }
+      &:hover {
+        .tour__select-arrow {
+          background: url("../img/tour/arrow_orange.svg") center / 12px 7px no-repeat, $color-light;
+        }
+      }
     }
     &-arrow {
-      background: url("../img/reservation/arrow.svg") center / contain no-repeat;
+      background: url("../img/reservation/arrow.svg") center / 12px 7px no-repeat;
     }
   }
   &__input-wrap {
@@ -53,6 +70,17 @@
     flex-direction: column;
     min-width: 360px;
     height: 99px;
+    @media (min-width: 1000px) {
+      &:hover {
+        border-color: $add-color;
+      }
+    }
+    &:focus {
+      border-color: #C2900F;
+    }
+    &:active {
+      border-color: $add-color;
+    }
   }
   &__label {
     font-weight: 700;

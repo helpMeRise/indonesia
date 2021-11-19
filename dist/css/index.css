@@ -1253,6 +1253,11 @@ a:after {
   transition: 0.5s;
 }
 
+a:focus,
+a:active {
+  opacity: 0.7;
+}
+
 ul {
   list-style: none;
   padding: 0;
@@ -1326,6 +1331,22 @@ p {
   line-height: 150%;
   color: #fff;
   background-color: #FCB500;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  border: 2px solid transparent;
+}
+
+.button:focus {
+  background-color: #F3C858;
+  border: 2px solid #C2900F;
+}
+
+.button:active {
+  background-color: #D09600;
+}
+
+.button:disabled {
+  background-color: #AFAFAF;
 }
 
 .swiper-pagination-bullet {
@@ -1391,6 +1412,12 @@ p {
   width: 35px;
   height: 16px;
   background: url("../img/hero/menu.svg") center/contain no-repeat;
+}
+
+.header__menu-button:focus,
+.header__menu-button:active {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .header__list {
@@ -1697,6 +1724,23 @@ p {
   -ms-flex-direction: column;
   flex-direction: column;
   gap: 12px;
+  cursor: pointer;
+}
+
+.tour__select-wrapper:focus .tour__select-arrow {
+  background: url("../img/tour/arrow_orange.svg") center/12px 7px no-repeat;
+}
+
+.tour__select-wrapper:active {
+  color: #FCB500;
+}
+
+.tour__select-wrapper:active .tour__select-arrow {
+  background: url("../img/tour/arrow_orange.svg") center/12px 7px no-repeat;
+}
+
+.tour__select-wrapper:hover .tour__select-arrow {
+  background: url("../img/tour/arrow_orange.svg") center/12px 7px no-repeat, #fff;
 }
 
 .tour__select-text {
@@ -1710,12 +1754,13 @@ p {
 .tour__select-arrow {
   position: absolute;
   content: "";
-  width: 12px;
-  height: 8px;
+  width: 24px;
+  height: 24px;
   top: 38px;
   right: 25px;
-  background: url("../img/tour/arrow.svg") center/contain no-repeat;
+  background: url("../img/tour/arrow.svg") center/12px 7px no-repeat;
   cursor: pointer;
+  border-radius: 50%;
 }
 
 .tour__button {
@@ -1818,6 +1863,15 @@ p {
   font-weight: 700;
   font-size: 14px;
   line-height: 130%;
+}
+
+.options__date:focus {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.options__date:active {
+  color: #FCB500;
 }
 
 .options__date_active {
@@ -2076,6 +2130,17 @@ p {
   background: url("../img/album/left.svg") center/contain no-repeat;
   z-index: 3;
   cursor: pointer;
+  border-radius: 50%;
+}
+
+.album__left:focus {
+  background-color: #AFAFAF;
+}
+
+.album__left:active {
+  -webkit-transform: translateY(-50%) rotate(180deg);
+  transform: translateY(-50%) rotate(180deg);
+  background: url("../img/album/arrow-right-active.svg") center/contain no-repeat;
 }
 
 .album__right {
@@ -2090,6 +2155,15 @@ p {
   background: url("../img/album/right.svg") center/contain no-repeat;
   z-index: 3;
   cursor: pointer;
+  border-radius: 50%;
+}
+
+.album__right:focus {
+  background-color: #AFAFAF;
+}
+
+.album__right:active {
+  background: url("../img/album/arrow-right-active.svg") center/contain no-repeat;
 }
 
 .album__nav_dis {
@@ -2159,8 +2233,24 @@ p {
   height: auto;
 }
 
+.reservation__select-wrapper:focus .tour__select-arrow {
+  background: url("../img/tour/arrow_orange.svg") center/12px 7px no-repeat;
+}
+
+.reservation__select-wrapper:active {
+  color: #FCB500;
+}
+
+.reservation__select-wrapper:active .tour__select-arrow {
+  background: url("../img/tour/arrow_orange.svg") center/12px 7px no-repeat;
+}
+
+.reservation__select-wrapper:hover .tour__select-arrow {
+  background: url("../img/tour/arrow_orange.svg") center/12px 7px no-repeat, #fff;
+}
+
 .reservation__select-arrow {
-  background: url("../img/reservation/arrow.svg") center/contain no-repeat;
+  background: url("../img/reservation/arrow.svg") center/12px 7px no-repeat;
 }
 
 .reservation__input-wrap {
@@ -2178,6 +2268,14 @@ p {
   flex-direction: column;
   min-width: 360px;
   height: 99px;
+}
+
+.reservation__input-wrap:focus {
+  border-color: #C2900F;
+}
+
+.reservation__input-wrap:active {
+  border-color: #FCB500;
 }
 
 .reservation__label {
@@ -2283,6 +2381,11 @@ p {
   margin-bottom: 30px;
 }
 
+.footer__link {
+  width: 26px;
+  height: 26px;
+}
+
 .footer__socials {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2294,9 +2397,21 @@ p {
 }
 
 .footer__socials-link {
+  display: block;
   width: 26px;
   height: 26px;
   cursor: pointer;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.footer__socials-link:after {
+  display: none;
+}
+
+.footer__socials-link:focus,
+.footer__socials-link:active {
+  opacity: 0.7;
 }
 
 .footer__socials-link_wa {
@@ -2406,6 +2521,15 @@ p {
     width: 100%;
   }
 
+  .button:hover {
+    background-color: #F3C858;
+  }
+
+  .header__menu-button:hover {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+
   .options__date:hover {
     -webkit-transform: scale(1.1);
     transform: scale(1.1);
@@ -2419,6 +2543,25 @@ p {
   .options__checkbox-label:hover {
     -webkit-transform: scale(1.1);
     transform: scale(1.1);
+  }
+
+  .album__left:hover {
+    -webkit-transform: translateY(-50%) rotate(180deg);
+    transform: translateY(-50%) rotate(180deg);
+    background: url("../img/album/arrow-right-black.svg") center/contain no-repeat;
+  }
+
+  .album__right:hover {
+    background: url("../img/album/arrow-right-black.svg") center/contain no-repeat;
+  }
+
+  .reservation__input-wrap:hover {
+    border-color: #FCB500;
+  }
+
+  .footer__socials-link:hover {
+    -webkit-transform: rotate(-30deg);
+    transform: rotate(-30deg);
   }
 }
 

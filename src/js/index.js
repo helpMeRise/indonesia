@@ -9,7 +9,12 @@
 
     burgerMenu();
 
-
+    const heroBtn = document.querySelector('.hero__button');
+    const reservation = document.querySelector('.reservation');
+    heroBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        reservation.scrollIntoView();
+    })
 
     const aboutSlider = document.querySelector('.about__pics'),
         aboutSliderWrap = document.querySelector('.about__list'),
@@ -99,14 +104,7 @@
         const selectPeopleTextReservation = peopleWrapReservation.querySelector('.reservation__select-text');
         const selectOptionsTextReservation = optionsWrapReservation.querySelector('.reservation__select-text');
 
-        const arrowDate = dateWrap.querySelector('.tour__select-arrow');
-        const arrowPeople = peopleWrap.querySelector('.tour__select-arrow');
-        const arrowOptions = optionsWrap.querySelector('.tour__select-arrow');
-        const arrowDateReservation = dateWrapReservation.querySelector('.reservation__select-arrow');
-        const arrowPeopleReservation = peopleWrapReservation.querySelector('.reservation__select-arrow');
-        const arrowOptionsReservation = optionsWrapReservation.querySelector('.reservation__select-arrow');
-
-        const tourBtn = document.querySelector('.tour__button');
+        const tourForm = document.querySelector('.tour__form');
 
         let text = '';
 
@@ -118,24 +116,108 @@
         selectPeopleTextReservation.textContent = optionsPeopleReservation[0].textContent;
         selectOptionsTextReservation.textContent = optionsOptionsReservation[0].textContent;
 
-        arrowDate.addEventListener('click', () => {
-            optionsDateBlock.classList.toggle('options_active')
-        })
-        arrowPeople.addEventListener('click', () => {
-            optionsPeopleBlock.classList.toggle('options_active')
-        })
-        arrowOptions.addEventListener('click', () => {
-            optionsOptionsBlock.classList.toggle('options_active')
-        })
+        dateWrap.addEventListener('click', (e) => {
+            let coords = dateWrap.getBoundingClientRect();
 
-        arrowDateReservation.addEventListener('click', () => {
-            optionsDateBlockReservation.classList.toggle('options_active')
+            if((e.clientX > coords.left + coords.width) || (e.clientY > coords.top + coords.height)) {
+                return false;
+            } else {
+                optionsDateBlock.classList.toggle('options_active');
+            }
+
+        });
+        peopleWrap.addEventListener('click', (e) => {
+            let coords = peopleWrap.getBoundingClientRect();
+
+            if((e.clientX > coords.left + coords.width) || (e.clientY > coords.top + coords.height)) {
+                return false;
+            } else {
+                optionsPeopleBlock.classList.toggle('options_active');
+            }
+
+        });
+        optionsWrap.addEventListener('click', (e) => {
+            let coords = optionsWrap.getBoundingClientRect();
+
+            if((e.clientX > coords.left + coords.width) || (e.clientY > coords.top + coords.height)) {
+                return false;
+            } else {
+                optionsOptionsBlock.classList.toggle('options_active');
+            }
+
+        });
+
+        dateWrapReservation.addEventListener('click', (e) => {
+            let coords = dateWrapReservation.getBoundingClientRect();
+            console.log(1)
+
+            if((e.clientX > coords.left + coords.width) || (e.clientY > coords.top + coords.height)) {
+                return false;
+            } else {
+                optionsDateBlockReservation.classList.toggle('options_active');
+            }
+
+        });
+        peopleWrapReservation.addEventListener('click', (e) => {
+            let coords = peopleWrapReservation.getBoundingClientRect();
+
+            if((e.clientX > coords.left + coords.width) || (e.clientY > coords.top + coords.height)) {
+                return false;
+            } else {
+                optionsPeopleBlockReservation.classList.toggle('options_active');
+            }
+
+        });
+        optionsWrapReservation.addEventListener('click', (e) => {
+            let coords = optionsWrapReservation.getBoundingClientRect();
+
+            if((e.clientX > coords.left + coords.width) || (e.clientY > coords.top + coords.height)) {
+                return false;
+            } else {
+                optionsOptionsBlockReservation.classList.toggle('options_active');
+            }
+        });
+        dateWrap.addEventListener('keyup', (e) => {
+            e.preventDefault();
+            if (e.code == 'Space') {
+                optionsDateBlock.classList.toggle('options_active')
+            }
+
         })
-        arrowPeopleReservation.addEventListener('click', () => {
-            optionsPeopleBlockReservation.classList.toggle('options_active')
+        peopleWrap.addEventListener('keyup', (e) => {
+            e.preventDefault();
+            if (e.code == 'Space') {
+                optionsPeopleBlock.classList.toggle('options_active')
+            }
+
         })
-        arrowOptionsReservation.addEventListener('click', () => {
-            optionsOptionsBlockReservation.classList.toggle('options_active')
+        optionsWrap.addEventListener('keyup', (e) => {
+            e.preventDefault();
+            if (e.code == 'Space') {
+                optionsOptionsBlock.classList.toggle('options_active')
+            }
+
+        })
+        dateWrapReservation.addEventListener('keyup', (e) => {
+            e.preventDefault();
+            if (e.code == 'Space') {
+                optionsDateBlockReservation.classList.toggle('options_active')
+            }
+
+        })
+        peopleWrapReservation.addEventListener('keyup', (e) => {
+            e.preventDefault();
+            if (e.code == 'Space') {
+                optionsDateBlockReservation.classList.toggle('options_active')
+            }
+
+        })
+        optionsWrapReservation.addEventListener('keyup', (e) => {
+            e.preventDefault();
+            if (e.code == 'Space') {
+                optionsDateBlockReservation.classList.toggle('options_active')
+            }
+
         })
 
         dates.forEach( item => {
@@ -256,7 +338,7 @@
             selectOptionsTextReservation.classList.add('options__select-text_active')
         })
 
-        tourBtn.addEventListener('click', e => {
+        tourForm.addEventListener('submit', e => {
             e.preventDefault();
 
             dates.forEach( (item, index) => {

@@ -33,6 +33,14 @@
       width: 35px;
       height: 16px;
       background: url('../img/hero/menu.svg') center / contain no-repeat;
+      &:focus, &:active {
+        transform: scale(1.1);
+      }
+      @media (min-width: 1000px) {
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
     }
   }
   &__list {
