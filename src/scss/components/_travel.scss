@@ -84,6 +84,7 @@
   }
 
   @media (max-width: 1200px) {
+    padding-top: 0;
     padding-bottom: 115px;
     &__container {
       background: url("../img/travel/map.svg") bottom 140px right 42px / 314px 268px no-repeat;
@@ -99,6 +100,7 @@
   }
 
   @media (max-width: 1023px) {
+    padding-top: 0;
     padding-bottom: 85px;
     &__container {
       background: url("../img/travel/map.svg") bottom center / 374px 320px no-repeat;
@@ -126,6 +128,7 @@
   }
 
   @media (max-width: 767px) {
+    padding-top: 0;
     padding-bottom: 55px;
     &__container {
       background: url("../img/travel/map.svg") bottom center / 266px 226px no-repeat;
