@@ -9363,7 +9363,7 @@ const sliderMob = () => {
 
 setTimeout(sliderMob, 100);
 $('.travel__accordion').accordion({
-  active: true,
+  active: 1,
   collapsible: true,
   heightStyle: 'content',
   icons: {
