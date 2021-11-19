@@ -9679,6 +9679,12 @@ selects();
 const albumSwiper = new Swiper('.album__slider', {
   slidesPerView: 1,
   centered: true,
+  a11y: {
+    firstSlideMessage: 'Это первый слайд',
+    lastSlideMessage: 'Это последний слайд',
+    nextSlideMessage: 'Кнопка переключения на следующий слайд',
+    prevSlideMessage: 'Кнопка переключения на предыдущий слайд'
+  },
   navigation: {
     prevEl: '.album__left',
     nextEl: '.album__right',
