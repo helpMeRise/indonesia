@@ -41,7 +41,7 @@
     setTimeout(sliderMob, 100);
 
     $('.travel__accordion').accordion({
-        active: 1,
+        active: 0,
         collapsible: true,
         heightStyle: 'content',
         icons: {
