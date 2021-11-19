@@ -102,7 +102,7 @@
       padding: 23px 20px;
     }
   }
-  @media (max-width: 1024px) {
+  @media (max-width: 1023px) {
     padding-top: 35px;
     &__container {
       display: flex;
@@ -148,7 +148,7 @@
       font-size: 14px;
     }
   }
-  @media (max-width: 768px) {
+  @media (max-width: 767px) {
     padding-top: 20px;
     &__container {
       flex-direction: column;
@@ -374,7 +374,7 @@
     overflow: hidden;
   }
 
-  @media (max-width: 1024px) {
+  @media (max-width: 1023px) {
     top: 50px;
     &__people-wrap {
       right: 0;
@@ -383,7 +383,7 @@
       right: 0;
     }
   }
-  @media (max-width: 768px) {
+  @media (max-width: 767px) {
     &__title {
       font-size: 14px;
     }

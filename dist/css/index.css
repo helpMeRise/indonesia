@@ -2813,7 +2813,7 @@ p {
   }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1023px) {
   .container {
     padding: 0 35px;
   }
@@ -3224,7 +3224,7 @@ p {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .container {
     padding: 0 25px;
   }

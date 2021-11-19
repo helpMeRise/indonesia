@@ -9351,7 +9351,7 @@ const aboutSwiper = new Swiper('.about__slider', {
 });
 
 const sliderMob = () => {
-  if (window.innerWidth <= 768) {
+  if (window.innerWidth <= 767) {
     aboutSlider.classList.add('about__slider', 'swiper');
     aboutSliderWrap.classList.add('swiper-wrapper');
     aboutSlides.forEach(item => {
