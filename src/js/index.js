@@ -22,7 +22,6 @@
             el: '.swiper-pagination',
         },
     });
-
     const sliderMob = () => {
         if (window.innerWidth <= 768) {
             aboutSlider.classList.add('about__slider', 'swiper');
@@ -34,7 +33,7 @@
             aboutSwiper.init();
         }
     }
-    sliderMob();
+    setTimeout(sliderMob, 100);
 
     $('.travel__accordion').accordion({
         active: true,
@@ -337,6 +336,26 @@
             },
             error() {
                 $('.reservation__title').text('Попробуйте позже');
+            }
+        })
+    })
+
+
+    const footerForm = $('.footer__form');
+
+    footerForm.submit(function(event) {
+        event.preventDefault();
+        $.ajax({
+            url: 'https://jsonplaceholder.typicode.com/posts',
+            type: 'POST',
+            data: $(this).serialize(),
+            success(data) {
+                $('.footer__form-title').text('Спасибо за заявку');
+                $('.footer__text').slideUp();
+                $('.footer__input-wrap').slideUp();
+            },
+            error() {
+                $('.footer__form-title').text('Попробуйте позже');
             }
         })
     })

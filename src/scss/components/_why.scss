@@ -3,7 +3,7 @@
   &__list {
     display: flex;
     flex-wrap: wrap;
-    row-gap: 87px;
+    row-gap: 57px;
     justify-content: space-between;
   }
   &__item {
@@ -79,12 +79,18 @@
     &__item {
       max-width: 300px;
     }
+    &__title {
+      margin-bottom: 60px;
+    }
   }
   @media (max-width: 1024px) {
     padding-top: 90px;
     padding-bottom: 45px;
     &__list {
-      row-gap: 60px;
+      row-gap: 30px;
+    }
+    &__title {
+      margin-bottom: 30px;
     }
     &__item {
       max-width: 220px;
@@ -121,6 +127,12 @@
   @media (max-width: 480px) {
     &__item {
       max-width: 130px;
+      &-text {
+        max-width: 125px;
+      }
+    }
+    &__title {
+      margin-bottom: 15px;
     }
   }
 }

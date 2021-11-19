@@ -9355,7 +9355,7 @@ const sliderMob = () => {
   }
 };
 
-sliderMob();
+setTimeout(sliderMob, 100);
 $('.travel__accordion').accordion({
   active: true,
   collapsible: true,
@@ -9630,6 +9630,26 @@ reservationForm.submit(function (event) {
 
     error() {
       $('.reservation__title').text('Попробуйте позже');
+    }
+
+  });
+});
+const footerForm = $('.footer__form');
+footerForm.submit(function (event) {
+  event.preventDefault();
+  $.ajax({
+    url: 'https://jsonplaceholder.typicode.com/posts',
+    type: 'POST',
+    data: $(this).serialize(),
+
+    success(data) {
+      $('.footer__form-title').text('Спасибо за заявку');
+      $('.footer__text').slideUp();
+      $('.footer__input-wrap').slideUp();
+    },
+
+    error() {
+      $('.footer__form-title').text('Попробуйте позже');
     }
 
   });

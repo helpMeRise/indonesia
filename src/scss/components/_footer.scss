@@ -1,0 +1,261 @@
+.footer {
+  padding: 80px 0;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.74), rgba(0, 0, 0, 0.74)),
+              url("../img/footer/background.jpg") center / cover no-repeat;
+  color: $color-light;
+  &__container {
+    display: flex;
+    flex-direction: column;
+  }
+  &__content {
+    display: flex;
+    margin-bottom: 50px;
+  }
+  &__menu {
+    width: 180px;
+    margin-right: 20px;
+  }
+  &__contacts {
+    width: 280px;
+    margin-right: 20px;
+    &-text {
+      line-height: 150%;
+      margin-bottom: 15px;
+      &:last-of-type {
+        margin-bottom: 30px;
+      }
+    }
+  }
+  &__socials {
+    display: flex;
+    justify-content: space-between;
+    max-width: 210px;
+    &-link {
+      width: 26px;
+      height: 26px;
+      cursor: pointer;
+      &_wa {
+        background: url("../img/footer/whats-app.svg") center / contain no-repeat;
+      }
+      &_inst {
+        background: url("../img/footer/instagram.svg") center / contain no-repeat;
+      }
+      &_youtube {
+        background: url("../img/footer/youtube.svg") center / contain no-repeat;
+      }
+      &_facebook {
+        background: url("../img/footer/facebook.svg") center / contain no-repeat;
+      }
+      &_tg {
+        background: url("../img/footer/telegram.svg") center / contain no-repeat;
+      }
+    }
+  }
+  &__form {
+    width: 400px;
+  }
+  &__logo {
+    margin-right: 106px;
+    margin-top: 15px;
+  }
+  &__title {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 150%;
+    margin-bottom: 20px;
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  &__item {
+    line-height: 150%;
+  }
+  &__text {
+    max-width: 280px;
+    margin-bottom: 6px;
+    line-height: 150%;
+  }
+  &__input {
+    &-wrap {
+      display: flex;
+    }
+    width: 300px;
+    height: 62px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid $placeholder-color;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 130%;
+    color: $color-light;
+  }
+  &__button {
+    width: 100px;
+    height: 62px;
+    border-radius: 8px;
+    background: url("../img/footer/arrow.svg") center / contain no-repeat;
+  }
+  &__info {
+    display: flex;
+    justify-content: space-between;
+
+    max-width: 970px;
+    &-text {
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 130%;
+    }
+  }
+  &__author {
+    margin-bottom: 10px;
+  }
+  @media (max-width: 1200px) {
+    &__content {
+      flex-direction: column;
+      align-content: flex-start;
+      flex-wrap: wrap;
+      max-height: 433px;
+    }
+    &__logo {
+      margin-bottom: 300px;
+      margin-right: 100px;
+    }
+    &__menu {
+      width: 140px;
+      margin-right: 100px;
+    }
+    &__contacts {
+      margin-bottom: 60px;
+      &-text {
+        &:last-of-type {
+          margin-bottom: 22px;
+        }
+      }
+    }
+    &__info {
+      max-width: 670px;
+    }
+  }
+  @media (max-width: 1024px) {
+    padding-top: 60px;
+    padding-bottom: 40px;
+    &__content {
+      flex-direction: row;
+      align-content: flex-start;
+      flex-wrap: wrap;
+      max-height: 533px;
+      gap: unset;
+    }
+    &__logo {
+      margin-top: -10px;
+      margin-bottom: 250px;
+      margin-right: 60px;
+    }
+    &__menu {
+      width: 140px;
+      margin-right: 40px;
+      margin-bottom: 40px;
+    }
+    &__list {
+      gap: 10px;
+    }
+    &__item {
+      font-size: 14px;
+    }
+    &__contacts {
+      margin-bottom: 60px;
+      &-text {
+        font-size: 14px;
+      }
+    }
+    &__form {
+      margin-left: 200px;
+    }
+    &__input {
+      width: 260px;
+      font-size: 14px;
+      display: flex;
+      height: 52px;
+    }
+    &__button {
+      width: 82px;
+      height: 52px;
+    }
+    &__title {
+      font-size: 16px;
+      margin-bottom: 15px;
+    }
+    &__text {
+      font-size: 14px;
+      margin-bottom: 10px;
+      max-width: 230px;
+    }
+  }
+  @media (max-width: 768px) {
+    padding: 20px 0;
+    &__content {
+      max-height: 500px;
+      max-width: 270px;
+      margin: 0 auto 52px;
+    }
+    &__logo {
+      margin-bottom: 25px;
+      margin-right: 100px;
+      margin-top: 0;
+    }
+    &__menu {
+      margin-bottom: 28px;
+      width: 100px;
+      margin-right: 0;
+    }
+    &__contacts {
+      width: 170px;
+      margin-right: 0;
+      margin-bottom: 0;
+      &-text {
+        font-size: 12px;
+        margin-bottom: 10px;
+        &:last-of-type {
+          margin-bottom: 15px;
+        }
+      }
+    }
+    &__form {
+      margin-left: 0;
+      width: 265px;
+    }
+    &__title {
+      font-size: 14px;
+    }
+    &__item {
+      font-size: 12px;
+    }
+    &__text {
+      font-size: 12px;
+      max-width: 198px;
+      margin-bottom: 0;
+    }
+    &__input {
+      font-size: 10px;
+      width: 196px;
+      height: 42px;
+    }
+    &__button {
+      height: 42px;
+      width: 67px;
+    }
+    &__info {
+      width: 270px;
+      flex-direction: column;
+      margin: 0 auto;
+      &-text {
+        font-size: 10px;
+      }
+    }
+    &__copy {
+      margin-bottom: 20px;
+    }
+  }
+}

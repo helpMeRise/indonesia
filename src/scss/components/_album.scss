@@ -34,7 +34,10 @@
     display: none;
   }
   @media (max-width: 1110px) {
-    padding: 120px 0px 60px;
+    padding: 60px 0px 60px;
+    &__title {
+      margin-bottom: 60px;
+    }
     &__item {
       max-width: 822px;
     }
@@ -46,7 +49,10 @@
     }
   }
   @media (max-width: 1024px) {
-    padding: 90px 0px 45px;
+    padding: 40px 0px;
+    &__title {
+      margin-bottom: 30px;
+    }
     &__text {
       max-width: 420px;
     }
@@ -61,7 +67,10 @@
     }
   }
   @media (max-width: 768px) {
-    padding: 50px 0px 25px;
+    padding: 25px 0px 25px;
+    &__title {
+      margin-bottom: 15px;
+    }
     &__left {
       width: 34px;
       height: 34px;
